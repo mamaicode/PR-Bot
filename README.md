@@ -36,13 +36,13 @@ Before using this PR-Bot, ensure you have the following prerequisites installed 
 
 To generate a zip file:
 
-```
+```bash
 cargo lambda build --release --output-format zip
 ```
 
 And to upload from CLI:
 
-```
+```bash
 ./deploy.sh
 ```
 
