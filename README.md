@@ -43,6 +43,8 @@ And to upload from CLI:
 After the Lambda function is uploaded to AWS, create an API gateway.
 Copy the link and paste it in your webhoooks on BitBucket, when triggered you will receive a card in Microsoft Teams.
 
+I highly advise you to increase the function timeout ( I have set it to 8 seconds )
+
 
 
 Thank you to leon3s [https://github.com/leon3s] for his assistance and creativity
