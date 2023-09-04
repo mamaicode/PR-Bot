@@ -40,3 +40,4 @@ And to upload from CLI:
 ```
 ./deploy.sh
 ```
+### Thank you to @leon3s for his assistance and creativity
