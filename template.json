@@ -1,0 +1,94 @@
+{
+  "type": "message",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "contentUrl": null,
+      "content": {
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "type": "ColumnSet",
+            "columns": [
+              {
+                "type": "Column",
+                "items": [
+                  {
+                    "type": "Image",
+                    "style": "Person",
+                    "url": "{{ data.pullrequest.author.links.avatar.href }}",
+                    "altText": "{{ data.pullrequest.author.display_name }}",
+                    "size": "Small"
+                  }
+                ],
+                "width": "auto"
+              },
+              {
+                "type": "Column",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "weight": "Bolder",
+                    "text": "{{ data.pullrequest.author.display_name }}",
+                    "wrap": true
+                  },
+                  {
+                    "type": "TextBlock",
+                    "spacing": "None",
+                    "text": "Created a pull request",
+                    "isSubtle": true,
+                    "wrap": true
+                  }
+                ],
+                "width": "stretch"
+              }
+            ]
+          },
+          {
+            "type": "TextBlock",
+            "text": "<at>pullrequests</at> : {{ data.pullrequest.title }}",
+            "wrap": true
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              {
+                "title": "Repository",
+                "value": "{{ data.repository.name }}"
+              },
+              {
+                "title": "Branch",
+                "value": "{{ data.pullrequest.source.branch.name }}"
+              },
+              {
+                "title": "Status",
+                "value": "{{ data.pullrequest.state }}"
+              }
+            ]
+          }
+        ],
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.0",
+        "actions": [
+          {
+            "type": "Action.OpenUrl",
+            "title": "Open",
+            "url": "{{ data.pullrequest.links.html.href }}"
+          }
+        ],
+        "msteams": {
+          "entities": [
+            {
+              "type": "mention",
+              "text": "<at>pullrequests</at>",
+              "mentioned": {
+                "id": "YOUR TEAMS ID",
+                "conversationIdentityType": "channel"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
