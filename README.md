@@ -2,7 +2,7 @@
 
 Lambda function to handle Bitbucket webhook payloads, extract relevant information, and send notifications to Microsoft Teams, saving you time on opening PR review requests manually.
 
-![Example of the notification](/home/wwadmin/Desktop/PR-Bot/example.png)
+![Example of the notification](https://github.com/scirin/PR-Bot/blob/main/home/wwadmin/Desktop/PR-Bot/example.png)
 
 ## Prerequisites
 
