@@ -2,6 +2,8 @@
 
 Lambda function to handle Bitbucket webhook payloads, extract relevant information, and send notifications to Microsoft Teams, saving you time on opening PR review requests manually.
 
+![Example of the notification](/home/wwadmin/Desktop/PR-Bot/example.png)
+
 ## Prerequisites
 
 Before using this PR-Bot, ensure you have the following prerequisites installed and configured:
@@ -33,18 +35,20 @@ Before using this PR-Bot, ensure you have the following prerequisites installed 
 ## Usage
 
 To generate a zip file:
+
 ```
 cargo lambda build --release --output-format zip
 ```
+
 And to upload from CLI:
+
 ```
 ./deploy.sh
 ```
+
 After the Lambda function is uploaded to AWS, create an API gateway.
 Copy the link and paste it in your webhoooks on BitBucket, when triggered you will receive a card in Microsoft Teams.
 
 I highly advise you to increase the function timeout ( I have set it to 8 seconds )
-
-
 
 Thank you to leon3s [https://github.com/leon3s] for his assistance and creativity
