@@ -40,4 +40,4 @@ And to upload from CLI:
 ```
 ./deploy.sh
 ```
-Thank you to [@leon3s] (https://github.com/leon3s) for his assistance and creativity
+Thank you to leon3s [https://github.com/leon3s] for his assistance and creativity
